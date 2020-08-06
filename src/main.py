@@ -1,16 +1,21 @@
+import configparser
 import sys
 from datetime import datetime, timedelta
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import QDate, QDateTime
+from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QTableWidgetItem
 
 from src.Database import Connector
 from src.Ui import Ui
 
+config = configparser.ConfigParser()
+config.read('../settings.ini')
+db_path = config.get("Settings", "db_path")
+
 app = QtWidgets.QApplication(sys.argv)
 
-db = Connector("../GTracker.db")
+db = Connector(db_path)
 ui = Ui(db.get_row_count()[0])
 
 table = db.get_all()

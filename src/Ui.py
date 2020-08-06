@@ -56,7 +56,7 @@ class Ui(QtWidgets.QMainWindow):
                "Tell about it to your friends\n" \
                "\n" \
                "Developer Viktor Karpov, 2020"
-        button_reply = QMessageBox.question(self, 'About', text, QMessageBox.Ok)
+        QMessageBox.question(self, 'About', text, QMessageBox.Ok)
 
     def highlight_dates(self, date):
         calendar = self.findChild(QtWidgets.QCalendarWidget, "calendarWidget")
