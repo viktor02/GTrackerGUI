@@ -51,7 +51,7 @@ class Ui(QtWidgets.QMainWindow):
         about_menu.addAction(about_act)
 
     def about_menu(self):
-        text = "GTracker GUI\n" \
+        text = "Hildr GUI\n" \
                "Thank you for using this application!\n" \
                "Tell about it to your friends\n" \
                "\n" \

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GTrackerGUI</string>
+   <string>HildrGUI</string>
   </property>
   <property name="windowIcon">
    <iconset>
